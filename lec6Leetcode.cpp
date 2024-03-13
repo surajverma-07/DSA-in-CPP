@@ -41,33 +41,71 @@ using namespace std;
 //mask? => take mask = 0000.......0 <<(leftshift) and (mask|1) -> 00000000......1 
 // do untill 000000......111 (1 is counted)
 
+// class Solution {
+// public:
+//     int bitwiseComplement(int n) {
+//       //edge/exception case 
+//         if(n==0){
+//             return 1;
+//         }
+//         int mask = 0;
+//         int n1 = n;
+        
+//         while(n1 != 0 ){
+//             n1 = n1 >> 1;
+//             mask = mask << 1;
+//             mask |= 1;
+//         }
+
+//         return ((~n)&(mask));
+
+//     }
+// };
+// int main(){
+ 
+//     int n ; 
+//     cout<<"Enter a number ";
+//     cin>>n;
+//     Solution obj;
+//   cout<<"Reverse in binary form is  =  "<<  obj.bitwiseComplement(n)<<endl;
+//     return 0;
+// }
+
+// 231 . Power of 2 
 class Solution {
 public:
-    int bitwiseComplement(int n) {
-      //edge/exception case 
-        if(n==0){
-            return 1;
-        }
-        int mask = 0;
-        int n1 = n;
-        
-        while(n1 != 0 ){
-            n1 = n1 >> 1;
-            mask = mask << 1;
-            mask |= 1;
-        }
+    bool isPowerOfTwo(int n) {
 
-        return ((~n)&(mask));
-
+    if(n==1 || n==2){
+        return true;
+     }
+      if(n==0){
+        return false;
+     }
+     if(n%2 != 0){
+         //odd no.
+         return false;
+     }
+   
+  else{
+     while(n >= 2){
+            n /= 2;
+            cout<<n<<endl;
+            if(n == 2){
+                return true;
+            }
+             if (n%2 != 0 ){
+                return false;
+            }
+        }
+  }
+        return 0;
     }
 };
 int main(){
- 
-    int n ; 
+    int n;
     cout<<"Enter a number ";
     cin>>n;
-    Solution obj;
-  cout<<"Reverse in binary form is  =  "<<  obj.bitwiseComplement(n)<<endl;
-    return 0;
+    Solution s;
+   (s.isPowerOfTwo(n))?(cout<<n <<" is in the power of 2"):(cout<<"not in power of 2");
 }
-
