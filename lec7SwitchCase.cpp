@@ -61,41 +61,53 @@ int main(){
 //   }
 
 //Calculator 
-  int a ,b,ope;
-  cout<<"Enter a and b    ";
-  cin>>a>>b;
+//   int a ,b,ope;
+//   cout<<"Enter a and b    ";
+//   cin>>a>>b;
  
-  cout<<"Enter operation to perform " 
-       <<" 1. sum "
-       <<" 2. substraction"
-       <<" 3. multiplication"
-       <<" 4. division"
-        <<"5. modulas "<<endl;
-  cin>>ope;
+//   cout<<"Enter operation to perform " 
+//        <<" 1. sum "
+//        <<" 2. substraction"
+//        <<" 3. multiplication"
+//        <<" 4. division"
+//         <<"5. modulas "<<endl;
+//   cin>>ope;
 
-   switch (ope)
-   {
-   case 1:
-      cout<<a<<" + "<<b<<" is = "<<a+b<<endl;
-    break;
-   case 2:
-      cout<<a<<" - "<<b<<" is = "<<a-b<<endl;
-    break;
-   case 3:
-      cout<<a<<" * "<<b<<" is = "<<a*b<<endl;
-    break;
-   case 4:
-   {
-      cout<<a<<" / "<<b<<" is = "<<a/b<<endl;
-   }
-    break;
-   case 5:
-      cout<<a<<" % "<<b<<" is = "<<a%b<<endl;
-    break;
+//    switch (ope)
+//    {
+//    case 1:
+//       cout<<a<<" + "<<b<<" is = "<<a+b<<endl;
+//     break;
+//    case 2:
+//       cout<<a<<" - "<<b<<" is = "<<a-b<<endl;
+//     break;
+//    case 3:
+//       cout<<a<<" * "<<b<<" is = "<<a*b<<endl;
+//     break;
+//    case 4:
+//    {
+//       cout<<a<<" / "<<b<<" is = "<<a/b<<endl;
+//    }
+//     break;
+//    case 5:
+//       cout<<a<<" % "<<b<<" is = "<<a%b<<endl;
+//     break;
    
-   default:
-     cout<<"\n Enter a valid Operation \n ";
-    break;
-   }      
+//    default:
+//      cout<<"\n Enter a valid Operation \n ";
+//     break;
+//    }      
+
+//Homework - amount 1330rs -> x100rs + x50rs + x20rs + x1rs 
+int amount;
+cout<<"Enter an amount  =   ";
+cin>>amount;
+    cout<<"\n No. of 100  ->  "<<amount/100;
+    amount %= 100;
+    cout<<"\n No. of 50  ->  "<<amount/50;
+    amount %= 50;
+    cout<<"\n No. of 20  ->  "<<amount/20;
+    amount %= 20;
+    cout<<"\n No. of 1  ->  "<<amount/1;
 
 }
