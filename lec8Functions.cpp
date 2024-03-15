@@ -20,6 +20,7 @@ bool isEven(int num){
     else return true;
 }
 
+//factorial
 int fact(int num){
     if(num == 0 || num ==1){
         return 1;
@@ -32,12 +33,12 @@ int fact(int num){
     return res;
 }
 
-
+//nCr calculation
 int nCr(int n , int r){
     return(fact(n)/(fact(n-r)*fact(r)));
 }
 
-
+//Prime no. or not
 bool isPrime(int num){
     if(num == 1) return false;
     if(num == 2 || num ==3 || num == 5){
@@ -56,6 +57,35 @@ bool isPrime(int num){
     return true;        
     
 }
+
+//Fibonacii series 5- 0 1 1 2 3
+void fibo(int term){
+    int a=0,b=1,temp;
+    cout<<" "<<a<<" "<<b<<" ";
+    for (int i = 2; i < term; i++)
+    {
+        temp = a+b;
+        a = b;
+        b = temp;
+        cout<<temp<<" ";
+    }
+    cout<<endl;
+}
+
+//Number of 1's bit in binary digit
+int no_one_bit(int bin){
+  int count = 0;
+  while(bin != 0){
+    if(bin&1 == 1){
+        count++;
+    }
+    bin = bin>>1;
+  }
+  return count;
+}
+
+
+
 
 int main(){
     int num;
@@ -81,13 +111,26 @@ int main(){
 // int result = nCr(n,r);
 // cout<<n<<"C"<<r<<"  =  "<<result<<endl;
 
-cout<<"Enter nubmer to check wheather it is prime or not  ";
-cin>>num;
-bool res = isPrime(num);
-if(res){
-    cout<<num<<" is a prime number "<<endl;
-}else{
-    cout<<num<<" is not a prime number "<<endl;
-}
+
+//Prime no.
+// cout<<"Enter nubmer to check wheather it is prime or not  ";
+// cin>>num;
+// bool res = isPrime(num);
+// if(res){
+//     cout<<num<<" is a prime number "<<endl;
+// }else{
+//     cout<<num<<" is not a prime number "<<endl;
+// }
+ 
+//fibonacci series 
+// cout<<"Enter number of terms to print fibonacci series  ";
+// cin>>num;
+// fibo(num);
+
+// No. of 1's bit in two no. in i'ts binary form 
+int num2;
+cout<<"Enter no. 1 and 2  ";
+cin>>num>>num2;
+cout<<"No. of 1's bit in a and b is  =  "<<(no_one_bit(num)+no_one_bit(num2))<<endl;
 }
 
