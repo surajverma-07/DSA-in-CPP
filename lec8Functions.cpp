@@ -71,7 +71,7 @@ void fibo(int term){
     }
     cout<<endl;
 }
-
+ 
 //Number of 1's bit in binary digit
 int no_one_bit(int bin){
   int count = 0;

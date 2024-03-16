@@ -4,12 +4,14 @@ using namespace std;
 
 // Function with array 
 void printArray(int arr[], int size){
-    cout<<"Printing array element \n";
+    cout<<"Printing array element inside function \n";
+    // arr[2]= 786;
     for (int i = 0; i < size; i++)
     {
         cout<<arr[i]<<" ";
     }
     cout<<"\n";
+    // cout<<"going to main ";
     
 }
 //polymorphysm 
@@ -40,6 +42,28 @@ void max_min (int arr[],int size){
   
 }
 
+bool linearSearch(int arr[],int size,int key){
+    for (int i = 0; i < size; i++)
+    {
+       if(key==arr[i]){
+        return true;
+       }
+    }
+    return false;
+    
+}
+
+void ReverseArr(int arr[],int size){
+    int start,end;
+    for ( start = 0, end = size-1; start <= end; start++,end--)
+    {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+    }
+    
+}
+
 int main(){
 //    int arr [] = {12,23,46,86,34,-1,565,9};
 //    int size = sizeof(arr)/sizeof(int);
@@ -60,5 +84,27 @@ int main(){
     cin>>arr[i];
  }
  
-   max_min(arr,size); 
+//    max_min(arr,size); 
+   //Predefint max and min function returns maximum element 
+//    cout<<max(34,99);
+
+//calling function to print 
+printArray(arr,size);
+// unlike variable array is paased by reference so result in updation is reflected in main()
+
+// for (int i = 0; i < size; i++)
+//     {
+//         cout<<arr[i]<<" ";
+//     }
+//     cout<<"\n";
+  
+// int key;
+// cout<<"\nEnter the key to be search in the array  ";
+// cin>>key;
+
+// bool res = linearSearch(arr,size,key);
+// cout<<(res)?"key is found ":"key not found ";
+
+ ReverseArr(arr,size);
+ printArray(arr,size);
 }
