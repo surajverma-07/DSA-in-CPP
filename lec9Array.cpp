@@ -25,6 +25,12 @@ void printArray(int arr[], int size){
     
 }
 
+//swaping 
+int swap(int &a, int &b){
+    int temp = a;
+    a = b;
+    b = temp;
+}
 // Max and Min in Array 
 void max_min (int arr[],int size){
     int max = arr[0],min = arr[0];
@@ -42,6 +48,7 @@ void max_min (int arr[],int size){
   
 }
 
+//linear search in array 
 bool linearSearch(int arr[],int size,int key){
     for (int i = 0; i < size; i++)
     {
@@ -53,15 +60,50 @@ bool linearSearch(int arr[],int size,int key){
     
 }
 
+//Reverse array element
 void ReverseArr(int arr[],int size){
     int start,end;
     for ( start = 0, end = size-1; start <= end; start++,end--)
     {
-        int temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
+        swap(arr[start],arr[end]);
     }
     
+}
+
+//sum of array element
+int Sum_ele(int arr[], int size ){
+    int sum = 0;
+    for (int i = 0; i < size; i++)
+    {
+        sum += arr[i];
+    }
+    return sum;
+    
+}
+
+//swapping two consucutive element 
+void SwapAlter(int arr[],int size){
+    for (int i = 0; i < size; i++)
+    {
+        if(i+1 < size){
+        swap(arr[i],arr[i+1]);
+        i++;
+        }
+    }
+    
+}
+
+//Find unique element in array 
+void unique_Array(){
+    int ans = 0;
+    int arr [5] = {1,2,4,1,2};
+    for (int i = 0; i < 5; i++)
+    {
+        ans = ans^arr[i];
+        cout<<"\n"<<ans;
+    }
+    cout<<endl<<"unique element is =  "<<ans;
+     
 }
 
 int main(){
@@ -105,6 +147,19 @@ printArray(arr,size);
 // bool res = linearSearch(arr,size,key);
 // cout<<(res)?"key is found ":"key not found ";
 
- ReverseArr(arr,size);
- printArray(arr,size);
+//Reverse of array
+//  ReverseArr(arr,size);
+//  printArray(arr,size);
+
+//Sum of array element 
+// cout<<"\nSum of the array element =  "<<Sum_ele(arr,size)<<endl;
+
+//Swapping alter element 
+// cout<<"\nSwapping alternative element\n";
+// SwapAlter(arr,size);
+// printArray(arr,size);
+
+//Unique element in array 
+//  unique_Array();
+
 }
