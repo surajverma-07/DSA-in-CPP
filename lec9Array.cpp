@@ -1,4 +1,5 @@
 #include<iostream>
+#include<stdlib.h>
 
 using namespace std;
 
@@ -106,6 +107,47 @@ void unique_Array(){
      
 }
 
+int findDuplicate(int arr[],int size){
+    int ans = 0;
+  for (int i = 0; i < size; i++)
+  {
+    ans ^= arr[i];
+    cout<<"first loop =  "<<ans<<endl;
+  }
+  
+  for (int i = 1; i < size; i++)
+  {
+    ans ^= i;
+    cout<<"2nd loop =  "<<ans<<endl;
+  }
+  return ans;
+  
+}
+
+// Intersection of two array element 
+vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, int m)
+{
+	vector<int> resArray;
+	int i = 0, j=0;
+	while(i<n && j<m){
+		if(arr1[i] == arr2[j]){
+			resArray.push_back(arr1[i]);
+			i++;
+			j++;
+		}
+		else if(arr1[i]<arr2[j]){
+			i++;
+		}
+		else{
+			j++;
+		}
+
+		
+	}
+		return resArray;
+
+}
+
 int main(){
 //    int arr [] = {12,23,46,86,34,-1,565,9};
 //    int size = sizeof(arr)/sizeof(int);
@@ -161,5 +203,11 @@ printArray(arr,size);
 
 //Unique element in array 
 //  unique_Array();
+
+//Find Duplicate if n = 5 [1,3,4,2,x] 1 <= x < 5
+//then find x 
+int arr3 [5] = {1,2,3,3,4};
+ int duplicate = findDuplicate(arr3,5);
+ cout<<"\nDuplicate element is "<<duplicate<<endl;
 
 }
