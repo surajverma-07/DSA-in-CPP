@@ -125,27 +125,52 @@ int findDuplicate(int arr[],int size){
 }
 
 // Intersection of two array element 
-vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, int m)
-{
-	vector<int> resArray;
-	int i = 0, j=0;
-	while(i<n && j<m){
-		if(arr1[i] == arr2[j]){
-			resArray.push_back(arr1[i]);
-			i++;
-			j++;
-		}
-		else if(arr1[i]<arr2[j]){
-			i++;
-		}
-		else{
-			j++;
-		}
+// int findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, int m)
+// {
+// 	vector<int> resArray;
+// 	int i = 0, j=0;
+// 	while(i<n && j<m){
+// 		if(arr1[i] == arr2[j]){
+// 			resArray.push_back(arr1[i]);
+// 			i++;
+// 			j++;
+// 		}
+// 		else if(arr1[i]<arr2[j]){
+// 			i++;
+// 		}
+// 		else{
+// 			j++;
+// 		}
 
 		
-	}
-		return resArray;
+// 	}
+// 		return resArray;
 
+// }
+
+//sort o and 1 
+void sort_z_o(int arr[], int size){
+    int left = 0 ;
+    int right = size-1;
+    while (left < right)
+    {
+        while(arr[left]==0 && left<right){
+            left++;
+        }
+        while(arr[right]==1 &&left<right){
+            right--;
+        }
+ 
+      if(left<right){
+
+        swap(arr[left],arr[right]);
+        left++;
+        right--;
+      }
+        
+    }
+    printArray(arr,size);
+    
 }
 
 int main(){
@@ -206,8 +231,12 @@ printArray(arr,size);
 
 //Find Duplicate if n = 5 [1,3,4,2,x] 1 <= x < 5
 //then find x 
-int arr3 [5] = {1,2,3,3,4};
- int duplicate = findDuplicate(arr3,5);
- cout<<"\nDuplicate element is "<<duplicate<<endl;
+// int arr3 [5] = {1,2,3,3,4};
+//  int duplicate = findDuplicate(arr3,5);
+//  cout<<"\nDuplicate element is "<<duplicate<<endl;
+  
+//   sort 0,1 eg. [1,1,1,0,1,0,0,1,0] = [0,0,0,0,1,1,1,1,1]
+sort_z_o(arr,size);
+
 
 }
