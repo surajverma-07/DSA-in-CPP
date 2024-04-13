@@ -21,7 +21,7 @@ int pivotElement(int arr[],int size){
     
 }
 
-long long int sqrt(int num){
+long long int sqrtInt(int num){
        long long int left = 0,right=num,ans,mid;
         while(left<=right){
             mid = left + (right-left)/2 ;
@@ -38,13 +38,31 @@ long long int sqrt(int num){
         }
         return ans;
     }
+    double sqrtFloat(int n , int precision , int intSol){
+        double factor = 1;
+        double ans = intSol;
+
+        for (int i = 0; i < precision; i++)
+        {
+            factor/=10;//0.1 , 0.01
+            for (double j = ans ; j*j < n; j= j+factor)
+            {
+              ans = j;
+            }
+            
+        }
+        return ans;
+    }
     
 
 int main(){
 
     int arr[7] = { 7,9,12,2,4,5,6};
-    
+    int  n;
+    cout<<"enter n to calculate its square root "; 
+    cin>>n;
     // cout<<"Pivot elment in the array is =  "<<pivotElement(arr,7)<<endl;
-    cout<<"square root of 16 is  =  "<<sqrt(16);
+    int intSol =  sqrtInt(n);
+    cout<<"Answer is =  "<< sqrtFloat(n,3,intSol);
     return 0;
-}
+}   
