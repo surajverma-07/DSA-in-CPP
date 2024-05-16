@@ -138,3 +138,50 @@ for(int i:d){
 }
 */
 
+// List 
+/*
+#include<list>
+int main(){
+    list<int> l;
+    //to initialise all element by same no.
+    list<int> l2(5,20);
+    //to copy one list into another 
+    list<int> l3(l2);
+    l.push_front(20);
+    l.push_front(10);
+    l.push_back(30);
+    l.push_back(40);
+    l.push_back(50);
+
+    // printing list l
+    cout<<"\nList l"<<endl;
+    for(int i : l ){
+        cout<<i<<"  ";
+    }
+    cout<<endl;
+    // printing list l2
+    cout<<"\nList l2"<<endl;
+    for(int i : l2 ){
+        cout<<i<<"  ";
+    }
+    cout<<endl;
+    // printing list l3
+    cout<<"\nList l2"<<endl;
+    for(int i : l3 ){
+        cout<<i<<"  ";
+    }
+    cout<<endl;
+
+    l.erase(l.begin());
+    l.pop_back();
+    cout<<"\nPrinting after erase and popback operation \n";
+    for(int i: l){
+        cout<<i<<"  ";
+    }
+    cout<<endl;
+    cout<<endl<<"size of list is = "<<l.size();
+
+}
+*/
+
+//stack
