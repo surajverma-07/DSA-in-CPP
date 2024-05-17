@@ -228,6 +228,7 @@ int main(){
 */
 
 // Priourity Queue
+/*
 #include<queue>
 
 int main(){
@@ -258,4 +259,44 @@ int main(){
         mini.pop();
     }
     cout<<endl;
+}
+*/
+
+//set 
+#include<set>
+
+int main(){
+
+    set<int> s;
+    //element can't be repeted in the set 
+    s.insert(10);
+    s.insert(10);
+    s.insert(10);
+    s.insert(398);
+    s.insert(686);
+    s.insert(-4);
+    s.insert(3);
+    s.insert(8);
+    for(int i:s){
+        cout<<i<<"  ";
+    }
+    cout<<endl;
+
+
+    s.erase(s.begin());
+    for(auto i : s ){
+        cout<<i<<"  ";
+    }
+    cout<<endl; 
+    cout<<"is 10 present -> "<<s.count(10)<<endl;
+    cout<<"is 0 present -> "<<s.count(0)<<endl;
+    cout<<"is set s is empty -> "<<s.empty()<<endl;
+    set<int>::iterator it = s.begin();
+    set<int>::iterator itr = s.find(3);
+    cout<<"Value present at itr is -> "<<*itr<<endl;
+    for(auto it = itr ; it!=s.end();it++){
+        cout<<*it<<"  ";
+    }
+    cout<<endl;
+    return 0; 
 }
