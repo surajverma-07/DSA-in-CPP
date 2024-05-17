@@ -227,3 +227,35 @@ int main(){
 }
 */
 
+// Priourity Queue
+#include<queue>
+
+int main(){
+    //max heap in priority queue
+    priority_queue<int> maxi;
+    maxi.push(3);
+    maxi.push(21);
+    maxi.push(-8);
+    maxi.push(323);
+    cout<<"Size of maxi queue is -> "<<maxi.size()<<endl;
+    int size = maxi.size();
+    for(int i=0; i<size;i++){
+        cout<<maxi.top()<<"  ";
+        maxi.pop();
+
+    }
+    cout<<endl;
+    //min heap in priority queue
+    priority_queue<int, vector<int>,greater<int>> mini;
+    mini.push(3);
+    mini.push(21);
+    mini.push(-8);
+    mini.push(323);
+    cout<<"Size of mini queue is -> "<<mini.size()<<endl;
+    int n = mini.size();
+    for(int i=0; i<n;i++){
+        cout<<mini.top()<<"  ";
+        mini.pop();
+    }
+    cout<<endl;
+}
