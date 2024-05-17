@@ -263,6 +263,7 @@ int main(){
 */
 
 //set 
+/*
 #include<set>
 
 int main(){
@@ -299,4 +300,36 @@ int main(){
     }
     cout<<endl;
     return 0; 
+}
+*/
+
+//map
+#include<map>
+int main(){
+   map<int,string> m;
+//    m[key] = "value"
+m[1] = "Suraj ";
+m.insert({7,"Thala for a Reason"});
+m[2] = "Kumar ";
+m[3] = "Verma ";
+
+for(auto i:m){
+    cout<<i.first<<"  ";
+    cout<<i.second<<endl;
+}
+// cout<<"Erasing 2  \n";
+// m.erase(2);
+cout<<"Finding 12 -> "<<m.count(12)<<endl;
+cout<<"After Erase \n";
+for(auto i:m){
+    cout<<i.first<<"  ";
+    cout<<i.second<<endl;
+}
+auto it = m.find(2);
+for(auto i= it;i!= m.end();i++){
+    cout<<(*i).first<<"  ";
+}
+cout<<endl;
+
+    return 0;
 }
