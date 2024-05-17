@@ -185,3 +185,22 @@ int main(){
 */
 
 //stack
+#include<stack>
+
+int main(){
+
+   stack<string> s;
+   s.push("Suraj");
+   s.push("kumar");
+   s.push("Verma");
+   cout<<"\nTop Element -> "<<s.top()<<endl;
+   s.pop();
+   cout<<"Top Element after pop 1 element -> "<<s.top()<<endl;
+   cout<<"Size of Stack -> "<<s.size()<<endl;
+   cout<<"Is stack is empty -> "<<s.empty()<<endl;
+   //printing all the element 
+
+   cout<<endl;
+
+    return 0;
+}
