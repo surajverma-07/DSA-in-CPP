@@ -206,3 +206,24 @@ int main(){
     return 0;
 }
 */
+
+// queue
+/*
+#include<queue>
+
+int main(){
+ 
+    queue<string>  q;
+     q.push("Suraj");
+   q.push("kumar");
+   q.push("Verma");
+   cout<<"\nFirst Element -> "<<q.front()<<endl;
+   q.pop();
+   cout<<"First Element after pop 1 element -> "<<q.front()<<endl;
+   cout<<"Size of Stack -> "<<q.size()<<endl;
+   cout<<"Is stack is empty -> "<<q.empty()<<endl;
+
+    return 0;
+}
+*/
+
