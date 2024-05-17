@@ -185,6 +185,7 @@ int main(){
 */
 
 //stack
+/*
 #include<stack>
 
 int main(){
@@ -204,3 +205,4 @@ int main(){
 
     return 0;
 }
+*/
