@@ -304,6 +304,7 @@ int main(){
 */
 
 //map
+/*
 #include<map>
 int main(){
    map<int,string> m;
@@ -332,4 +333,23 @@ for(auto i= it;i!= m.end();i++){
 cout<<endl;
 
     return 0;
+}
+*/
+
+//Algorithms 
+#include<algorithm>
+#include<vector>
+int main(){
+    vector<int> v1;
+    v1.push_back(10);
+    v1.push_back(20);
+    v1.push_back(88);
+    v1.push_back(99);
+    cout<<"binary search 99 -> "<<binary_search(v1.begin(),v1.end(),99)<<endl;
+    min(a,b);
+    max(a,b);
+    reverse(from,to);
+    rotate(from,to);
+    sort(start,end);
+    
 }
