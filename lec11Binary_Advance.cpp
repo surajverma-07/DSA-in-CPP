@@ -9,7 +9,7 @@ int pivotElement(int arr[],int size){
     {
         // cout<<"while loop loading ...";
         mid = (left+right)/2;
-        if(arr[mid]>= arr[0]){
+        if(arr[mid] >= arr[0]){
             //it's denote left side because right side elements are less than arr[0]
             left = mid+1;
         }
@@ -57,11 +57,11 @@ long long int sqrtInt(int num){
 
 int main(){
 
-    int arr[7] = { 7,9,12,2,4,5,6};
+    int arr[8] = { 7,9,12,32,4,5,6,9};
     int  n;
     cout<<"enter n to calculate its square root "; 
     cin>>n;
-    // cout<<"Pivot elment in the array is =  "<<pivotElement(arr,7)<<endl;
+    cout<<"Pivot elment in the array is =  "<<pivotElement(arr,8)<<endl;
     int intSol =  sqrtInt(n);
     cout<<"Answer is =  "<< sqrtFloat(n,3,intSol);
     return 0;
