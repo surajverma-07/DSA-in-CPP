@@ -66,8 +66,6 @@ int main() {
 */
 
 //Vector
-/*
-#include<vector>
 int main(){
     vector<int> vec;
     //Capicity -> memory space assigned to it 
@@ -77,6 +75,14 @@ int main(){
     vector<int> v1(5,2.6);
     //copying one vector(v1 ) into another v2
     vector<int> v2(v1);
+    v1.insert(v1.begin(),100);
+    v1.insert(v1.begin()+2,3,7);
+    v1.emplace_back(777);//it is faster than push_back
+    //iterator points the memory address 
+    vector<int>::iterator it = v1.begin();
+    for(it;it != v1.end(); it++){
+        cout<<"\nIterator : v1 =  "<<*(it);
+    }
      cout<<"\nPrint v2 \n";
     for(int i:v2){
         cout<<i<<endl;
@@ -126,9 +132,11 @@ int main(){
     cout<<"\nafter clear size ";
     cout<<"\nsize = " <<vec.size()<<endl;
     cout<<"\ncapacity = "<<vec.capacity()<<endl;
+
+    
     return 0;
 }
-*/
+
 
 //Deque -> Double Ended queue
 
