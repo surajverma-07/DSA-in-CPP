@@ -66,76 +66,76 @@ int main() {
 */
 
 //Vector
-int main(){
-    vector<int> vec;
-    //Capicity -> memory space assigned to it 
-    //size -> element present into it
-    // vector<int> v1(size,initializeFromHere)
-    //All element are initialised by 1
-    vector<int> v1(5,2.6);
-    //copying one vector(v1 ) into another v2
-    vector<int> v2(v1);
-    v1.insert(v1.begin(),100);
-    v1.insert(v1.begin()+2,3,7);
-    v1.emplace_back(777);//it is faster than push_back
-    //iterator points the memory address 
-    vector<int>::iterator it = v1.begin();
-    for(it;it != v1.end(); it++){
-        cout<<"\nIterator : v1 =  "<<*(it);
-    }
-     cout<<"\nPrint v2 \n";
-    for(int i:v2){
-        cout<<i<<endl;
-    }
+// int main(){
+//     vector<int> vec;
+//     //Capicity -> memory space assigned to it 
+//     //size -> element present into it
+//     // vector<int> v1(size,initializeFromHere)
+//     //All element are initialised by 1
+//     vector<int> v1(5,2.6);
+//     //copying one vector(v1 ) into another v2
+//     vector<int> v2(v1);
+//     v1.insert(v1.begin(),100);
+//     v1.insert(v1.begin()+2,3,7);
+//     v1.emplace_back(777);//it is faster than push_back
+//     //iterator points the memory address 
+//     vector<int>::iterator it = v1.begin();
+//     for(it;it != v1.end(); it++){
+//         cout<<"\nIterator : v1 =  "<<*(it);
+//     }
+//      cout<<"\nPrint v2 \n";
+//     for(int i:v2){
+//         cout<<i<<endl;
+//     }
 
-    cout<<"capacity of vector vec is = "<<vec.capacity()<<endl;
-    cout<<"size of vector vec is = "<<vec.size()<<endl;
+//     cout<<"capacity of vector vec is = "<<vec.capacity()<<endl;
+//     cout<<"size of vector vec is = "<<vec.size()<<endl;
     
-    vec.push_back(10);
-    cout<<"\nAfter inserting 1 element ....\n";
-    cout<<"capacity of vector vec is = "<<vec.capacity()<<endl;
-    cout<<"size of vector vec is = "<<vec.size()<<endl;
-    vec.push_back(20);
-    cout<<"\nAfter inserting 2 element ....\n";
-    cout<<"capacity of vector vec is = "<<vec.capacity()<<endl;
-    cout<<"size of vector vec is = "<<vec.size()<<endl;
-    vec.push_back(30);
-    cout<<"\nAfter inserting 3 element ....\n";
-    cout<<"capacity of vector vec is = "<<vec.capacity()<<endl;
-    cout<<"size of vector vec is = "<<vec.size()<<endl;
-    vec.push_back(40);
-    cout<<"\nAfter inserting 4 element ....\n";
-    cout<<"capacity of vector vec is = "<<vec.capacity()<<endl;
-    cout<<"size of vector vec is = "<<vec.size()<<endl;
-    //vector capacity doubles when size is not sufficients to take another element 
-    //bts -> memory space shifted from old to new and copies previous element .
-     cout<<"\nElement at index 2 is =  "<<vec.at(2);
-    cout<<"\nEmpty or Not  =  "<<vec.empty();
-    cout<<"\nFirst Element =  "<<vec.front();
-    cout<<"\nLast Element =  "<<vec.back();
+//     vec.push_back(10);
+//     cout<<"\nAfter inserting 1 element ....\n";
+//     cout<<"capacity of vector vec is = "<<vec.capacity()<<endl;
+//     cout<<"size of vector vec is = "<<vec.size()<<endl;
+//     vec.push_back(20);
+//     cout<<"\nAfter inserting 2 element ....\n";
+//     cout<<"capacity of vector vec is = "<<vec.capacity()<<endl;
+//     cout<<"size of vector vec is = "<<vec.size()<<endl;
+//     vec.push_back(30);
+//     cout<<"\nAfter inserting 3 element ....\n";
+//     cout<<"capacity of vector vec is = "<<vec.capacity()<<endl;
+//     cout<<"size of vector vec is = "<<vec.size()<<endl;
+//     vec.push_back(40);
+//     cout<<"\nAfter inserting 4 element ....\n";
+//     cout<<"capacity of vector vec is = "<<vec.capacity()<<endl;
+//     cout<<"size of vector vec is = "<<vec.size()<<endl;
+//     //vector capacity doubles when size is not sufficients to take another element 
+//     //bts -> memory space shifted from old to new and copies previous element .
+//      cout<<"\nElement at index 2 is =  "<<vec.at(2);
+//     cout<<"\nEmpty or Not  =  "<<vec.empty();
+//     cout<<"\nFirst Element =  "<<vec.front();
+//     cout<<"\nLast Element =  "<<vec.back();
 
-    //before pop 
-    cout<<"\nBefore pop";
-    for(int i:vec){
-        cout<<i<<endl;
-    }
-    vec.pop_back();
-    cout<<"\nBefore pop";
-    for(int i:vec){
-        cout<<i<<endl;
-    }
+//     //before pop 
+//     cout<<"\nBefore pop";
+//     for(int i:vec){
+//         cout<<i<<endl;
+//     }
+//     vec.pop_back();
+//     cout<<"\nBefore pop";
+//     for(int i:vec){
+//         cout<<i<<endl;
+//     }
 
-    cout<<"\nbefore clear size ";
-    cout<<"\nsize = " <<vec.size()<<endl;
-    cout<<"\ncapacity = "<<vec.capacity()<<endl;
-    vec.clear();
-    cout<<"\nafter clear size ";
-    cout<<"\nsize = " <<vec.size()<<endl;
-    cout<<"\ncapacity = "<<vec.capacity()<<endl;
+//     cout<<"\nbefore clear size ";
+//     cout<<"\nsize = " <<vec.size()<<endl;
+//     cout<<"\ncapacity = "<<vec.capacity()<<endl;
+//     vec.clear();
+//     cout<<"\nafter clear size ";
+//     cout<<"\nsize = " <<vec.size()<<endl;
+//     cout<<"\ncapacity = "<<vec.capacity()<<endl;
 
     
-    return 0;
-}
+//     return 0;
+// }
 
 
 //Deque -> Double Ended queue
@@ -351,7 +351,7 @@ int main(){
 */
 
 //map
-/*
+
 #include<map>
 int main(){
    map<int,string> m;
@@ -359,6 +359,7 @@ int main(){
 m[1] = "Suraj ";
 m.insert({7,"Thala for a Reason"});
 m[2] = "Kumar ";
+m[2] = "jsr ";
 m[3] = "Verma ";
 
 for(auto i:m){
@@ -367,7 +368,7 @@ for(auto i:m){
 }
 // cout<<"Erasing 2  \n";
 // m.erase(2);
-cout<<"Finding 12 -> "<<m.count(12)<<endl;
+cout<<"Finding 2 -> "<<m.count(2)<<endl;
 cout<<"After Erase \n";
 for(auto i:m){
     cout<<i.first<<"  ";
@@ -379,9 +380,14 @@ for(auto i= it;i!= m.end();i++){
 }
 cout<<endl;
 
+cout<<endl;
+for(auto it : m){
+    cout<<it.first<<"  "<<it.second<<endl;
+}
+
     return 0;
 }
-*/
+
 
 //Algorithms 
 /*
