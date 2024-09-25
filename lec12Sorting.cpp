@@ -151,6 +151,39 @@ public:
         merge(arr, low, mid, high);
     }
 
+
+// quick sort 
+ void quickSort(vector<int> &arr, int low, int high)
+    {
+        // code her
+        if(low<high){
+         int pindex = partition(arr,low,high);
+         quickSort(arr,low,pindex-1);
+         quickSort(arr,pindex+1,high);
+        }
+    }
+    
+    int partition (vector<int> &arr, int low, int high)
+    {
+       // Your code here
+       int pivot = arr[low];
+       int i=low,j=high;
+       while(i<j){
+        while (arr[i] <= pivot && i <= high - 1) {
+            i++;
+        }
+
+        while (arr[j] > pivot && j >= low + 1) {
+            j--;
+        }
+        if (i < j) swap(arr[i], arr[j]);
+            
+       }
+       
+       swap(arr[j],arr[low]);
+       return j;//j is a index where pivot element is stored
+       
+    }
 }; // class closing
 
 int main()
@@ -165,6 +198,7 @@ int main()
     int size = arr.size() - 1;
     // sort.mergeSort(arr, 0, size);
     // sort.bSRec(arr,arr.size());
-    sort.iSRec(arr,1,arr.size());
+    // sort.iSRec(arr,1,arr.size());
+    sort.quickSort(arr,0,size);
     sort.printArray(arr);
 }
