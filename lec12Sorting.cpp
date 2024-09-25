@@ -157,7 +157,8 @@ public:
     {
         // code her
         if(low<high){
-         int pindex = partition(arr,low,high);
+        //  int pindex = partition(arr,low,high);//assending
+         int pindex = partitionDes(arr,low,high);//decending
          quickSort(arr,low,pindex-1);
          quickSort(arr,pindex+1,high);
         }
@@ -174,6 +175,28 @@ public:
         }
 
         while (arr[j] > pivot && j >= low + 1) {
+            j--;
+        }
+        if (i < j) swap(arr[i], arr[j]);
+            
+       }
+       
+       swap(arr[j],arr[low]);
+       return j;//j is a index where pivot element is stored
+       
+    }
+   
+    int partitionDes (vector<int> &arr, int low, int high)
+    {
+       // Your code here
+       int pivot = arr[low];
+       int i=low,j=high;
+       while(i<j){
+        while (arr[i] > pivot && i <= high - 1) {
+            i++;
+        }
+
+        while (arr[j] <= pivot && j >= low + 1) {
             j--;
         }
         if (i < j) swap(arr[i], arr[j]);
